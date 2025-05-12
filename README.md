@@ -12,7 +12,7 @@
 
 VeraLux isn’t just a DeFi token—it’s a revolution. Built on Solana’s lightning-fast blockchain, LUX empowers communities with ethical finance, transparent governance, and a vision for a decentralized world. Join us to dismantle centralized control and build a brighter tomorrow.
 
-> *“We’re not just building a token—we’re crafting a legacy.”*  
+> *“We’re not just building a token. We’re crafting a better future.”*  
 > — Michael Williams, Founder
 
 ---
@@ -25,7 +25,9 @@ VeraLux isn’t just a DeFi token—it’s a revolution. Built on Solana’s lig
   - 🔥 20% burned to boost scarcity  
   - 💧 24% to liquidity for stable trading  
   - 🌍 20% to charity, plus treasury, team, and LP incentives  
-- **Anti-Whale**: Transfers >5M LUX face double tax, keeping markets fair.
+- **Anti-Whale**: governance voting caps, vesting schedules, transaction caps and progressive tax.
+- **Early stability**: A robust suite of features, including emergency pauses, treasury management, transaction caps, progressive taxes, staking incentives, and multisig governance and more, all designed to prevent manipulation and foster a secure token ecosystem.
+
 
 ### 🌱 Staking That Empowers
 Stake 20K–5M LUX across four tiers, earning 500–125K LUX weekly:  
@@ -38,7 +40,7 @@ Stake 20K–5M LUX across four tiers, earning 500–125K LUX weekly:
 | 💎 T3 | 5M         | 30 days     | 125,000 LUX   |
 
 ### 🗳️ Governance by the People
-- **12 Proposal Types**: Stakers vote on tax rates, staking tiers, and more.  
+- **12+ Proposal Types**: Stakers vote on tax rates, staking tiers, and more.  
 - **Voting Power**: Tier 1+ (≥100K LUX) get 1–20 votes, boosted up to 1.995x after 90 days.  
 - **Secure Process**: 14-day voting, 3-day execution delay, multisig oversight.
 
