@@ -1,0 +1,1241 @@
+{
+  "address": "4BzWp6JCnguTPGEfHhG12hfJR86tGGU3fJSEdfuo2nBZ",
+  "metadata": {
+    "name": "veralux",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "buy_presale",
+      "discriminator": [
+        113,
+        18,
+        193,
+        68,
+        35,
+        36,
+        215,
+        8
+      ],
+      "accounts": [
+        {
+          "name": "buyer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "state",
+          "writable": true
+        },
+        {
+          "name": "presale_purchase",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  101,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  112,
+                  117,
+                  114,
+                  99,
+                  104,
+                  97,
+                  115,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "buyer"
+              }
+            ]
+          }
+        },
+        {
+          "name": "presale_vesting",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  101,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  118,
+                  101,
+                  115,
+                  116,
+                  105,
+                  110,
+                  103
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "buyer"
+              }
+            ]
+          }
+        },
+        {
+          "name": "buyer_usdt_account",
+          "writable": true
+        },
+        {
+          "name": "presale_usdt_account",
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "init_global",
+      "discriminator": [
+        44,
+        238,
+        77,
+        253,
+        76,
+        182,
+        192,
+        162
+      ],
+      "accounts": [
+        {
+          "name": "signer1",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "signer2",
+          "signer": true,
+          "optional": true
+        },
+        {
+          "name": "signer3",
+          "signer": true,
+          "optional": true
+        },
+        {
+          "name": "signer4",
+          "signer": true,
+          "optional": true
+        },
+        {
+          "name": "signer5",
+          "signer": true,
+          "optional": true
+        },
+        {
+          "name": "state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "treasury",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  101,
+                  97,
+                  115,
+                  117,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "multisig",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  117,
+                  108,
+                  116,
+                  105,
+                  115,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "migration_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  103,
+                  114,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "ix",
+          "type": {
+            "defined": {
+              "name": "InitGlobalIx"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "init_presale",
+      "discriminator": [
+        172,
+        248,
+        47,
+        226,
+        223,
+        52,
+        94,
+        217
+      ],
+      "accounts": [
+        {
+          "name": "buyer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "presale_purchase",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  101,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  112,
+                  117,
+                  114,
+                  99,
+                  104,
+                  97,
+                  115,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "buyer"
+              }
+            ]
+          }
+        },
+        {
+          "name": "presale_vesting",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  101,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  118,
+                  101,
+                  115,
+                  116,
+                  105,
+                  110,
+                  103
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "buyer"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "update_global",
+      "discriminator": [
+        90,
+        152,
+        240,
+        21,
+        199,
+        38,
+        72,
+        20
+      ],
+      "accounts": [
+        {
+          "name": "signer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "ix",
+          "type": {
+            "defined": {
+              "name": "UpdateGlobalIx"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "ContractState",
+      "discriminator": [
+        190,
+        138,
+        10,
+        223,
+        189,
+        116,
+        222,
+        115
+      ]
+    },
+    {
+      "name": "MigrationState",
+      "discriminator": [
+        95,
+        146,
+        135,
+        64,
+        145,
+        25,
+        197,
+        115
+      ]
+    },
+    {
+      "name": "Multisig",
+      "discriminator": [
+        224,
+        116,
+        121,
+        186,
+        68,
+        161,
+        79,
+        236
+      ]
+    },
+    {
+      "name": "PresalePurchase",
+      "discriminator": [
+        34,
+        110,
+        127,
+        240,
+        83,
+        219,
+        152,
+        227
+      ]
+    },
+    {
+      "name": "PresaleVesting",
+      "discriminator": [
+        97,
+        146,
+        20,
+        99,
+        2,
+        184,
+        221,
+        191
+      ]
+    },
+    {
+      "name": "Treasury",
+      "discriminator": [
+        238,
+        239,
+        123,
+        238,
+        89,
+        1,
+        168,
+        253
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "InitializeEvent",
+      "discriminator": [
+        206,
+        175,
+        169,
+        208,
+        241,
+        210,
+        35,
+        221
+      ]
+    },
+    {
+      "name": "PresalePurchaseEvent",
+      "discriminator": [
+        30,
+        12,
+        195,
+        203,
+        44,
+        187,
+        164,
+        135
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "Paused",
+      "msg": "Contract is paused"
+    },
+    {
+      "code": 6001,
+      "name": "NotPaused",
+      "msg": "Contract is not paused"
+    },
+    {
+      "code": 6002,
+      "name": "UnauthorizedSender",
+      "msg": "Unauthorized: Sender does not own the token account"
+    },
+    {
+      "code": 6003,
+      "name": "InsufficientSigners",
+      "msg": "Unauthorized: Insufficient signers for multisig operation"
+    },
+    {
+      "code": 6004,
+      "name": "SignerNotOwner",
+      "msg": "Unauthorized: Signer is not a multisig owner"
+    },
+    {
+      "code": 6005,
+      "name": "ReentrancyGuardTriggered",
+      "msg": "Reentrancy guard triggered: Operation already in progress"
+    },
+    {
+      "code": 6006,
+      "name": "InsufficientStakingPoolFunds",
+      "msg": "Insufficient funds in staking pool"
+    },
+    {
+      "code": 6007,
+      "name": "InsufficientAirdropFunds",
+      "msg": "Insufficient funds in airdrop pool"
+    },
+    {
+      "code": 6008,
+      "name": "InsufficientLiquidityIncentiveFunds",
+      "msg": "Insufficient funds in liquidity incentive pool"
+    },
+    {
+      "code": 6009,
+      "name": "InsufficientStakedAmount",
+      "msg": "Insufficient staked amount for operation"
+    },
+    {
+      "code": 6010,
+      "name": "NoLockedTokens",
+      "msg": "No locked tokens available"
+    },
+    {
+      "code": 6011,
+      "name": "MaxSellTxnLimitExceeded",
+      "msg": "Maximum sell transaction limit exceeded"
+    },
+    {
+      "code": 6012,
+      "name": "DailySellLimitExceeded",
+      "msg": "Daily sell limit exceeded"
+    },
+    {
+      "code": 6013,
+      "name": "MaxTransferLimitExceeded",
+      "msg": "Maximum transfer limit exceeded"
+    },
+    {
+      "code": 6014,
+      "name": "DailyTransferLimitExceeded",
+      "msg": "Daily transfer limit exceeded"
+    },
+    {
+      "code": 6015,
+      "name": "CooldownActive",
+      "msg": "Transfer cooldown active"
+    },
+    {
+      "code": 6016,
+      "name": "VestingNotStarted",
+      "msg": "Vesting period has not started"
+    },
+    {
+      "code": 6017,
+      "name": "NoRewards",
+      "msg": "No rewards available"
+    },
+    {
+      "code": 6018,
+      "name": "ProposalExpired",
+      "msg": "Proposal has expired"
+    },
+    {
+      "code": 6019,
+      "name": "VotingPeriodNotEnded",
+      "msg": "Voting period has not ended"
+    },
+    {
+      "code": 6020,
+      "name": "NoticePeriodNotMet",
+      "msg": "Notice period for proposal execution not met"
+    },
+    {
+      "code": 6021,
+      "name": "ProposalAlreadyExecuted",
+      "msg": "Proposal has already been executed"
+    },
+    {
+      "code": 6022,
+      "name": "WithdrawalDelayNotMet",
+      "msg": "Withdrawal delay not met"
+    },
+    {
+      "code": 6023,
+      "name": "LockPeriodNotMet",
+      "msg": "Lock period not met"
+    },
+    {
+      "code": 6024,
+      "name": "InvalidProposalType",
+      "msg": "Invalid proposal type"
+    },
+    {
+      "code": 6025,
+      "name": "InvalidProposalValueCount",
+      "msg": "Invalid proposal value count"
+    },
+    {
+      "code": 6026,
+      "name": "InvalidTaxRate",
+      "msg": "Invalid tax rate"
+    },
+    {
+      "code": 6027,
+      "name": "InvalidStakingTiers",
+      "msg": "Invalid staking tiers"
+    },
+    {
+      "code": 6028,
+      "name": "InvalidTaxAllocationTotal",
+      "msg": "Invalid tax allocation total"
+    },
+    {
+      "code": 6029,
+      "name": "InvalidReductionThresholds",
+      "msg": "Invalid reduction thresholds"
+    },
+    {
+      "code": 6030,
+      "name": "InvalidReductionFactor",
+      "msg": "Invalid reduction factor"
+    },
+    {
+      "code": 6031,
+      "name": "InvalidSellLimit",
+      "msg": "Invalid sell limit"
+    },
+    {
+      "code": 6032,
+      "name": "InvalidTransferLimit",
+      "msg": "Invalid transfer limit"
+    },
+    {
+      "code": 6033,
+      "name": "InvalidTaxThreshold",
+      "msg": "Invalid tax threshold"
+    },
+    {
+      "code": 6034,
+      "name": "InvalidStakingReward",
+      "msg": "Invalid staking reward"
+    },
+    {
+      "code": 6035,
+      "name": "InvalidAccounts",
+      "msg": "Invalid accounts provided"
+    },
+    {
+      "code": 6036,
+      "name": "ArithmeticOverflow",
+      "msg": "Arithmetic overflow occurred"
+    },
+    {
+      "code": 6037,
+      "name": "VectorOverflow",
+      "msg": "Vector overflow: Too many elements"
+    },
+    {
+      "code": 6038,
+      "name": "UninitializedAccount",
+      "msg": "Account not initialized"
+    },
+    {
+      "code": 6039,
+      "name": "InvalidDexProgram",
+      "msg": "Provided DEX program ID is not executable"
+    },
+    {
+      "code": 6040,
+      "name": "MigrationNotActive",
+      "msg": "Migration is not active"
+    },
+    {
+      "code": 6041,
+      "name": "MigrationActive",
+      "msg": "Migration is active"
+    },
+    {
+      "code": 6042,
+      "name": "PresaleNotActive",
+      "msg": "Presale is not active"
+    },
+    {
+      "code": 6043,
+      "name": "PresaleSupplyExceeded",
+      "msg": "Presale supply exceeded"
+    },
+    {
+      "code": 6044,
+      "name": "PresaleMaxPerWalletExceeded",
+      "msg": "Presale maximum per wallet exceeded"
+    },
+    {
+      "code": 6045,
+      "name": "AmountTooSmallAfterTax",
+      "msg": "Amount too small after tax"
+    },
+    {
+      "code": 6046,
+      "name": "DescriptionTooLong",
+      "msg": "Description too long"
+    },
+    {
+      "code": 6047,
+      "name": "TooManyProposalValues",
+      "msg": "Too many proposal values"
+    },
+    {
+      "code": 6048,
+      "name": "InsufficientTierForVoting",
+      "msg": "Insufficient tier for voting"
+    },
+    {
+      "code": 6049,
+      "name": "InvalidImmediateAmount",
+      "msg": "Invalid immediate amount"
+    },
+    {
+      "code": 6050,
+      "name": "InvalidTeamMember",
+      "msg": "Invalid team member"
+    },
+    {
+      "code": 6051,
+      "name": "VestingCanceled",
+      "msg": "Vesting canceled"
+    },
+    {
+      "code": 6052,
+      "name": "ClaimCooldownNotMet",
+      "msg": "Claim cooldown not met"
+    },
+    {
+      "code": 6053,
+      "name": "ExceedsVestingTotal",
+      "msg": "Exceeds vesting total"
+    },
+    {
+      "code": 6054,
+      "name": "TooFewOwners",
+      "msg": "Too few owners in multisig"
+    },
+    {
+      "code": 6055,
+      "name": "DuplicateOwners",
+      "msg": "Duplicate owners in multisig"
+    },
+    {
+      "code": 6056,
+      "name": "TooManyOwners",
+      "msg": "Too many owners in multisig"
+    },
+    {
+      "code": 6057,
+      "name": "ThresholdExceedsOwners",
+      "msg": "Threshold exceeds number of owners"
+    },
+    {
+      "code": 6058,
+      "name": "TooManyRecipients",
+      "msg": "Too many recipients"
+    },
+    {
+      "code": 6059,
+      "name": "InvalidRecipientAccounts",
+      "msg": "Invalid recipient accounts"
+    },
+    {
+      "code": 6060,
+      "name": "InvalidRecipientAccount",
+      "msg": "Invalid recipient account"
+    },
+    {
+      "code": 6061,
+      "name": "InvalidContract",
+      "msg": "Invalid contract"
+    },
+    {
+      "code": 6062,
+      "name": "TooManyWhitelistedContracts",
+      "msg": "Too many whitelisted contracts"
+    },
+    {
+      "code": 6063,
+      "name": "ContractNotWhitelisted",
+      "msg": "Contract not whitelisted"
+    },
+    {
+      "code": 6064,
+      "name": "AlreadyMigrated",
+      "msg": "Already migrated"
+    },
+    {
+      "code": 6065,
+      "name": "InvalidMigrationUser",
+      "msg": "Invalid migration user"
+    },
+    {
+      "code": 6066,
+      "name": "MigrationToggleCooldown",
+      "msg": "Migration toggle cooldown active"
+    },
+    {
+      "code": 6067,
+      "name": "BatchSizeTooLarge",
+      "msg": "Batch size too large"
+    },
+    {
+      "code": 6068,
+      "name": "WhitelistDelayNotMet",
+      "msg": "Whitelist delay not met"
+    },
+    {
+      "code": 6069,
+      "name": "TimeLockNotMet",
+      "msg": "Time lock requirement not met"
+    },
+    {
+      "code": 6070,
+      "name": "CallerNotWhitelisted",
+      "msg": "Caller is not whitelisted"
+    },
+    {
+      "code": 6071,
+      "name": "InvalidDestination",
+      "msg": "Invalid transfer destination"
+    },
+    {
+      "code": 6072,
+      "name": "VersionMismatch",
+      "msg": "Version mismatch in whitelisted contract"
+    },
+    {
+      "code": 6073,
+      "name": "KYCRequired",
+      "msg": "KYC verification required for this purchase"
+    },
+    {
+      "code": 6074,
+      "name": "InvalidThreshold",
+      "msg": "Invalid threshold"
+    },
+    {
+      "code": 6075,
+      "name": "InvalidVectorSize",
+      "msg": "Invalid vector size"
+    },
+    {
+      "code": 6076,
+      "name": "InvalidProposal",
+      "msg": "Invalid proposal"
+    },
+    {
+      "code": 6077,
+      "name": "InvalidBuyerUSDTOwner",
+      "msg": "Invalid buyer USDT owner"
+    },
+    {
+      "code": 6078,
+      "name": "InvalidPresaleUSDTReceiver",
+      "msg": "Invalid presale USDT receiver"
+    }
+  ],
+  "types": [
+    {
+      "name": "ContractState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury",
+            "type": "pubkey"
+          },
+          {
+            "name": "charity_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "team_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "liquidity_pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "presale_usdt_receiver",
+            "type": "pubkey"
+          },
+          {
+            "name": "proposal_count",
+            "type": "u64"
+          },
+          {
+            "name": "total_voting_power",
+            "type": "u64"
+          },
+          {
+            "name": "launch_timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "tax_rate",
+            "type": "u64"
+          },
+          {
+            "name": "progressive_tax_threshold",
+            "type": "u64"
+          },
+          {
+            "name": "total_presale_sold",
+            "type": "u64"
+          },
+          {
+            "name": "dex_programs",
+            "type": {
+              "vec": "pubkey"
+            }
+          },
+          {
+            "name": "pause_reason",
+            "type": "string"
+          },
+          {
+            "name": "is_processing",
+            "type": "bool"
+          },
+          {
+            "name": "presale_active",
+            "type": "bool"
+          },
+          {
+            "name": "paused",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "InitGlobalIx",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "charity_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "team_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "liquidity_pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "launch_timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "presale_usdt_receiver",
+            "type": "pubkey"
+          },
+          {
+            "name": "initial_owners",
+            "type": {
+              "vec": "pubkey"
+            }
+          },
+          {
+            "name": "initial_dex_programs",
+            "type": {
+              "vec": "pubkey"
+            }
+          },
+          {
+            "name": "threshold",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "InitializeEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "launch_timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "initial_owners",
+            "type": {
+              "vec": "pubkey"
+            }
+          },
+          {
+            "name": "threshold",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MigrationState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "total_locked",
+            "type": "u64"
+          },
+          {
+            "name": "migration_toggle_timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "migration_active",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Multisig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owners",
+            "type": {
+              "vec": "pubkey"
+            }
+          },
+          {
+            "name": "threshold",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PresalePurchase",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_purchased",
+            "type": "u64"
+          },
+          {
+            "name": "kyc_verified",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PresalePurchaseEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "buyer",
+            "type": "pubkey"
+          },
+          {
+            "name": "usdt_amount",
+            "type": "u64"
+          },
+          {
+            "name": "token_amount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PresaleVesting",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "claimed_amount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Treasury",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "staking_pool",
+            "type": "u64"
+          },
+          {
+            "name": "airdrop_pool",
+            "type": "u64"
+          },
+          {
+            "name": "governance_reserve",
+            "type": "u64"
+          },
+          {
+            "name": "marketing_fund",
+            "type": "u64"
+          },
+          {
+            "name": "emergency_fund",
+            "type": "u64"
+          },
+          {
+            "name": "liquidity_incentive",
+            "type": "u64"
+          },
+          {
+            "name": "team_pool",
+            "type": "u64"
+          },
+          {
+            "name": "launch_timestamp",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UpdateGlobalIx",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "presale_usdt_receiver",
+            "type": "pubkey"
+          },
+          {
+            "name": "launch_timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "team_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "charity_wallet",
+            "type": "pubkey"
+          }
+        ]
+      }
+    }
+  ]
+}
